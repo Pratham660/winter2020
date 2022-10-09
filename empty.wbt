@@ -1,0 +1,44 @@
+#VRML_SIM R2021a utf8
+WorldInfo {
+  coordinateSystem "NUE"
+}
+Viewpoint {
+  orientation -0.41102058233152666 0.8930129700868021 0.18327551979629253 0.8917926273678017
+  position 1.1270833884168958 0.660408293706207 1.1215714615916808
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+}
+Robot {
+  children [
+    Transform {
+      children [
+        DEF parablola Shape {
+          appearance PBRAppearance {
+            roughness 1
+            metalness 0
+            IBLStrength 0
+          }
+          geometry Cylinder {
+            height 0.1
+            radius 0.05
+          }
+        }
+        HingeJoint {
+          jointParameters HingeJointParameters {
+          }
+          device [
+            RotationalMotor {
+            }
+          ]
+        }
+      ]
+    }
+  ]
+  boundingObject USE parablola
+  physics Physics {
+  }
+}
